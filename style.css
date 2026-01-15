@@ -43,10 +43,6 @@ h4 {
     margin-bottom: 1rem;
 }
 
-p {
-    margin-bottom: 1.5rem;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -64,7 +60,7 @@ section {
     padding: 5rem 0;
 }
 
-/* Tipografía grande para evitar que se vea vacío */
+
 html {
     font-size: 18px;
 }
@@ -797,4 +793,74 @@ h3 {
     .contact-form-container {
         padding: 2rem 1.5rem;
     }
+}
+
+/* Estilos específicos para la sección de la comunidad */
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.playlist-card {
+    background-color: var(--color-blanco);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.playlist-card::after {
+    content: "Abrir en Spotify →";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
+    padding: 0.8rem 0;
+    transition: var(--transicion);
+}
+
+.playlist-card:hover::after {
+    bottom: 0;
+}
+
+.playlist-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.playlist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playlist-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-negro);
+    margin-bottom: 0.8rem;
+}
+
+.playlist-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-gris-texto);
 }
